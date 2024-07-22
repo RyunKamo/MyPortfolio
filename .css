@@ -1,0 +1,50 @@
+body {
+    background-color: #00552E;
+}
+
+.black_board {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.black_board p {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.flash_cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    background-color: white;
+    width: 40%;
+    height: 10%;
+}
+
+.content_flash_cards {
+    outline: none;
+    border: none;
+    font-size: 25px;
+    text-align: center;
+}
+
+.next_back_btn {
+    display: none;
+    /* display: flex; */
+    color: white;
+    font-weight: bold;
+    margin-left: 50%;
+    font-size: 20px;
+    margin-top: 1%;
+}
+
+.back_btn, .next_btn {
+    cursor: pointer;
+}
