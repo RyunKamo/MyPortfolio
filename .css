@@ -33,6 +33,7 @@ body {
     border: none;
     font-size: 25px;
     text-align: center;
+    width: 100%;
 }
 
 .next_back_btn {
