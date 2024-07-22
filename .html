@@ -13,16 +13,23 @@
       <div class="flash_cards">
         <input
           type="text"
-          class="content_flash_cards"
-          id="contentFlashCards"
+          class="flash_cards_words"
+          id="FlashCardsWords"
           placeholder="単語を書いて下さい"
+          onblur="appearSaveBtn();"
+        />
+        <input
+          type="text"
+          class="flash_cards_meanings"
+          id="FlashCardsMeanigs"
+          placeholder="英単語の意味を書いて下さい"
           onblur="appearSaveBtn();"
         />
       </div>
       <div id="nextBackBtn" class="next_back_btn">
-        <span class="back_btn">戻る</span>
+        <span class="back_btn" onclick="backBtn()">戻る</span>
         <span>/</span>
-        <span class="next_btn">次へ</span>
+        <span class="next_btn" onclick="nextBtn()">次へ</span>
       </div>
     </div>
     <script src=".js"></script>
