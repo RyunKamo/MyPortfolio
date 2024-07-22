@@ -14,10 +14,12 @@
         <input
           type="text"
           class="content_flash_cards"
+          id="contentFlashCards"
           placeholder="単語を書いて下さい"
+          onblur="appearSaveBtn();"
         />
       </div>
-      <div class="next_back_btn">
+      <div id="nextBackBtn" class="next_back_btn">
         <span class="back_btn">戻る</span>
         <span>/</span>
         <span class="next_btn">次へ</span>
