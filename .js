@@ -1,6 +1,7 @@
 "use strict";
 
 let wordsAndMeanings = new Array();
+let newWordsAndMeanings = new Array();
 
 // 文字が入力されている時だけボタンが出現する処理
 function appearSaveBtn() {
@@ -36,17 +37,21 @@ function nextBtn() {
       document.getElementById("useFlashCards").style.display="none";
       document.getElementById("blackBoardTitle").style.display="block";
     }
-  console.log(wordsAndMeanings);
+  // console.log(wordsAndMeanings);
 }
 
-// チェックボックスに✓が付け加えられた際の処理
+// チェックボックスに✓が付け加えられた際に、（一次元）配列を英単語とその意味ごとに区切りに多次元配列に変更
 function makeFlashCards(checkbox){
   if(checkbox.checked){
     for(let i = 0; wordsAndMeanings.length>i; i++ ){
-      console.log(i)
+      if(newWordsAndMeanings.length===wordsAndMeanings.length/2){
+        break;
+      }else{
+        newWordsAndMeanings.push(wordsAndMeanings.slice(i*2,(i+2)+i*1))
+      }
     }
-    // console.log("yes")
   }else{
-    console.log("no")
+    ;
   }
+  console.log(newWordsAndMeanings)
 }
