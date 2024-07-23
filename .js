@@ -11,23 +11,6 @@ function appearSaveBtn() {
   }
 }
 
-// function appearSaveBtn() {
-//   if(document.getElementById("words").value !== ""){
-//     document.getElementById("nextBackBtn").style.display = "flex";
-//   }else if(document.getElementById("meanings").value !== ""){
-//     document.getElementById("nextBackBtn").style.display = "flex";
-    
-//     if(wordsAndMeanings.length % 2 == 0 && wordsAndMeanings.length !== 0){
-//       console.log("ok");
-//     }else{
-//       console.log("no");
-//     }
-//   }
-//   else{
-//     document.getElementById("nextBackBtn").style.display = "none";
-//   }
-// }
-
 // 配列に英単語と意味を加える処理
 function nextBtn() {
   if(document.getElementById("FlashCardsWords").style.display != "none" && document.getElementById("words").value !==""){
@@ -47,9 +30,20 @@ function nextBtn() {
   }
     // 英単語とその意味のペアを一つ以上入力した際に完了ボタンが出現する処理
     if(wordsAndMeanings.length % 2 == 0 && wordsAndMeanings.length !== 0){
-      document.getElementById("use_flash_cards").style.display="block";
+      document.getElementById("blackBoardTitle").style.display="none";
+      document.getElementById("useFlashCards").style.display="block";
     }else{
-      document.getElementById("use_flash_cards").style.display="none";
+      document.getElementById("useFlashCards").style.display="none";
+      document.getElementById("blackBoardTitle").style.display="block";
     }
   console.log(wordsAndMeanings);
+}
+
+// チェックボックスに✓が付け加えられた際の処理
+function makeFlashCards(checkbox){
+  if(checkbox.checked){
+    console.log("OK")
+  }else{
+    console.log("no")
+  }
 }

@@ -9,8 +9,8 @@
   <body>
     <div class="black_board">
       <div class="black_board_content"></div>
-      <p class="black_board_title">オリジナルの単語帳をつくろう！</p>
-      <p class="use_flash_cards" id="use_flash_cards"><input type="checkbox" class="checkbox" id="checkbox">単語帳を使う</p>
+      <p class="black_board_title" id="blackBoardTitle">オリジナルの単語帳をつくろう！</p>
+      <p class="use_flash_cards" id="useFlashCards">単語帳を使いますか？<input type="checkbox" class="checkbox" id="checkbox" onchange="makeFlashCards(this)"></p>
       <div id="FlashCardsWords" class="flash_cards_words">
         <input
           type="text"

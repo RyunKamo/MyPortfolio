@@ -20,6 +20,15 @@ body {
 
 .use_flash_cards{
     display: none;
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+input[type=checkbox] {
+    transform: scale(3);
+    margin-left: 35px;
+    /* accent-color:#00552E; */
 }
 
 .flash_cards_words {
