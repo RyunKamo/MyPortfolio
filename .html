@@ -10,18 +10,20 @@
     <div class="black_board">
       <div class="black_board_content"></div>
       <p>オリジナルの単語帳をつくろう！</p>
-      <div class="flash_cards">
+      <div id="FlashCardsWords" class="flash_cards_words">
         <input
           type="text"
-          class="flash_cards_words"
-          id="FlashCardsWords"
+          id="words"
+          class="words"
           placeholder="単語を書いて下さい"
           onblur="appearSaveBtn();"
         />
+      </div>
+      <div id="FlashCardsMeanigs" class="flash_cards_meanings">
         <input
           type="text"
-          class="flash_cards_meanings"
-          id="FlashCardsMeanigs"
+          class="meanings"
+          class="meanings"
           placeholder="英単語の意味を書いて下さい"
           onblur="appearSaveBtn();"
         />
