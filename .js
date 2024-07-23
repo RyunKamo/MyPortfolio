@@ -42,7 +42,10 @@ function nextBtn() {
 // チェックボックスに✓が付け加えられた際の処理
 function makeFlashCards(checkbox){
   if(checkbox.checked){
-    console.log("OK")
+    for(let i = 0; wordsAndMeanings.length>i; i++ ){
+      console.log(i)
+    }
+    // console.log("yes")
   }else{
     console.log("no")
   }
