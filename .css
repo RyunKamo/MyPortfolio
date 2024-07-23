@@ -12,10 +12,14 @@ body {
     flex-direction: column;
 }
 
-.black_board p {
+.black_board_title {
     color: white;
     font-weight: bold;
     font-size: 35px;
+}
+
+.use_flash_cards{
+    display: none;
 }
 
 .flash_cards_words {
