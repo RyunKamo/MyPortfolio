@@ -2,6 +2,7 @@
 
 let wordsAndMeanings = new Array();
 
+console.log(wordsAndMeanings);
 // 文字が入力されている時だけボタンが出現する処理
 function appearSaveBtn() {
   if(document.getElementById("words").value !== "" || document.getElementById("meanings").value !== ""){
@@ -28,4 +29,11 @@ function nextBtn() {
     document.getElementById("FlashCardsWords").style.display = "flex";
   }
   console.log(wordsAndMeanings);
+}
+
+// 英単語とその意味のペアを一つ以上入力した際に完了ボタンが出現する処理
+if(wordsAndMeanings.length>=2){
+  console.log("ok");
+}else{
+  console.log("no");
 }
