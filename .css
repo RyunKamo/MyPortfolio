@@ -67,7 +67,7 @@ input[type=checkbox] {
     width: 100%;
 }
 
-.next_back_btn {
+.next_btn_container {
     display: none;
     color: white;
     font-weight: bold;
