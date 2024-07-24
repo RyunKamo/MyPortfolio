@@ -21,12 +21,12 @@ function nextBtn() {
     document.getElementById("nextBtnContainer").style.display = "none";
     document.getElementById("FlashCardsMeanigs").style.display = "flex";
     
-    // 一つ前の英単語を消すボタンを出現させる処理
-    if(wordsAndMeanings.length!==0&&wordsAndMeanings.length%2==1){
-      document.getElementById("deleteBtnContainer").style.display="block";
-      document.getElementById("deleteMeaningsBtn").style.display="none";
-      document.getElementById("deleteWordsBtn").style.display="block";
-    }
+      // 一つ前の英単語を消すボタンを出現させる処理
+      if(wordsAndMeanings.length!==0&&wordsAndMeanings.length%2==1){
+        document.getElementById("deleteBtnContainer").style.display="block";
+        document.getElementById("deleteMeaningsBtn").style.display="none";
+        document.getElementById("deleteWordsBtn").style.display="block";
+      }
   }else if(document.getElementById("FlashCardsMeanigs").style.display = "flex" && document.getElementById("meanings").value !==""){
     wordsAndMeanings.push(document.getElementById("meanings").value);
     document.getElementById("FlashCardsMeanigs").style.display = "none";
@@ -34,12 +34,12 @@ function nextBtn() {
     document.getElementById("nextBtnContainer").style.display = "none";
     document.getElementById("FlashCardsWords").style.display = "flex";
     
-    // 一つ前の意味を消すボタンを出現させる処理
-    if(wordsAndMeanings.length!==0&&wordsAndMeanings.length%2==0){
-      document.getElementById("deleteBtnContainer").style.display="block";
-      document.getElementById("deleteWordsBtn").style.display="none";
-      document.getElementById("deleteMeaningsBtn").style.display="block";
-    }
+      // 一つ前の意味を消すボタンを出現させる処理
+      if(wordsAndMeanings.length!==0&&wordsAndMeanings.length%2==0){
+        document.getElementById("deleteBtnContainer").style.display="block";
+        document.getElementById("deleteWordsBtn").style.display="none";
+        document.getElementById("deleteMeaningsBtn").style.display="block";
+      }
 
   }
     // 英単語とその意味のペアを一つ以上入力した際に完了ボタンが出現する処理
@@ -75,6 +75,9 @@ function deleteBtn(element){
     // 配列の最新の要素（＝一番最後の要素）を抽出し、消去する
     wordsAndMeanings.pop();
     console.log(wordsAndMeanings)
+    // document.getElementById("FlashCardsMeanigs").style.display = "none";
+    // document.getElementById("deleteBtnContainer").style.display="none";
+    // document.getElementById("deleteMeaningsBtn").style.display="none";
   }else{
     // 配列の最新の要素（＝一番最後の要素）を抽出し、消去する
     wordsAndMeanings.pop();
