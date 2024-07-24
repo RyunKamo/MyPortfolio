@@ -68,3 +68,11 @@ function makeFlashCards(checkbox){
   }
   console.log(newWordsAndMeanings)
 }
+
+function deleteBtn(element){
+  if(element.id=="deleteWordsBtn"){
+    console.log("英単語を消去")
+  }else{
+    console.log("意味を消去")
+  }
+}
