@@ -76,6 +76,6 @@ input[type=checkbox] {
     margin-top: 1%;
 }
 
-.back_btn, .next_btn {
+.delete_btn, .next_btn {
     cursor: pointer;
 }
