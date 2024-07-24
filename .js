@@ -75,11 +75,9 @@ function deleteBtn(element){
     // 配列の最新の要素（＝一番最後の要素）を抽出し、消去する
     wordsAndMeanings.pop();
     console.log(wordsAndMeanings)
-    // console.log("英単語を消去")
   }else{
     // 配列の最新の要素（＝一番最後の要素）を抽出し、消去する
     wordsAndMeanings.pop();
     console.log(wordsAndMeanings)
-    // console.log("意味を消去")
   }
 }
