@@ -23,7 +23,6 @@ function nextBtn() {
     
     // 一つ前の英単語を消すボタンを出現させる処理
     if(wordsAndMeanings.length!==0&&wordsAndMeanings.length%2==1){
-      console.log("英単語を消す")
       document.getElementById("deleteBtnContainer").style.display="block";
       document.getElementById("deleteMeaningsBtn").style.display="none";
       document.getElementById("deleteWordsBtn").style.display="block";
@@ -37,7 +36,6 @@ function nextBtn() {
     
     // 一つ前の意味を消すボタンを出現させる処理
     if(wordsAndMeanings.length!==0&&wordsAndMeanings.length%2==0){
-      console.log("意味をけす")
       document.getElementById("deleteBtnContainer").style.display="block";
       document.getElementById("deleteWordsBtn").style.display="none";
       document.getElementById("deleteMeaningsBtn").style.display="block";
@@ -54,33 +52,6 @@ function nextBtn() {
     }
   // console.log(wordsAndMeanings);
 }
-
-// function nextBtn() {
-//   if(document.getElementById("FlashCardsWords").style.display != "none" && document.getElementById("words").value !==""){
-//     wordsAndMeanings.push(document.getElementById("words").value);
-//     document.getElementById("FlashCardsWords").style.display = "none";
-//     document.getElementById("words").value="";
-//     document.getElementById("nextBtnContainer").style.display = "none";
-//     document.getElementById("FlashCardsMeanigs").style.display = "flex";
-    
-//   }else if(document.getElementById("FlashCardsMeanigs").style.display = "flex" && document.getElementById("meanings").value !==""){
-//     wordsAndMeanings.push(document.getElementById("meanings").value);
-//     document.getElementById("FlashCardsMeanigs").style.display = "none";
-//     document.getElementById("meanings").value="";
-//     document.getElementById("nextBtnContainer").style.display = "none";
-//     document.getElementById("FlashCardsWords").style.display = "flex";
-
-//   }
-//     // 英単語とその意味のペアを一つ以上入力した際に完了ボタンが出現する処理
-//     if(wordsAndMeanings.length % 2 == 0 && wordsAndMeanings.length !== 0){
-//       document.getElementById("blackBoardTitle").style.display="none";
-//       document.getElementById("useFlashCards").style.display="block";
-//     }else{
-//       document.getElementById("useFlashCards").style.display="none";
-//       document.getElementById("blackBoardTitle").style.display="block";
-//     }
-//   // console.log(wordsAndMeanings);
-// }
 
 // チェックボックスに✓が付け加えられた際に、（一次元）配列を英単語とその意味ごとに区切りに多次元配列に変更
 function makeFlashCards(checkbox){
