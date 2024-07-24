@@ -76,6 +76,6 @@ input[type=checkbox] {
     margin-top: 1%;
 }
 
-.delete_btn, .next_btn {
+.delete_words_btn,.delete_meanings_btn, .next_btn {
     cursor: pointer;
 }

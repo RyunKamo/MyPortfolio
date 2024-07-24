@@ -24,6 +24,9 @@ function nextBtn() {
     // 一つ前の英単語を消すボタンを出現させる処理
     if(wordsAndMeanings.length!==0&&wordsAndMeanings.length%2==1){
       console.log("英単語を消す")
+      document.getElementById("deleteBtnContainer").style.display="block";
+      document.getElementById("deleteMeaningsBtn").style.display="none";
+      document.getElementById("deleteWordsBtn").style.display="block";
     }
   }else if(document.getElementById("FlashCardsMeanigs").style.display = "flex" && document.getElementById("meanings").value !==""){
     wordsAndMeanings.push(document.getElementById("meanings").value);
@@ -35,6 +38,9 @@ function nextBtn() {
     // 一つ前の意味を消すボタンを出現させる処理
     if(wordsAndMeanings.length!==0&&wordsAndMeanings.length%2==0){
       console.log("意味をけす")
+      document.getElementById("deleteBtnContainer").style.display="block";
+      document.getElementById("deleteWordsBtn").style.display="none";
+      document.getElementById("deleteMeaningsBtn").style.display="block";
     }
 
   }
