@@ -123,20 +123,36 @@ function toPracticePage(checkbox) {
   document.getElementById("selectFlashCardsTypesPage").style.display = "none";
   document.getElementById("practicePage").style.display = "flex";
 
+  // 単語のスペルを覚える
   if (checkbox.id == "checkboxMemorizeWords") {
-    // 単語のスペルを覚える
-    console.log("単語のスペルを覚える");
-    console.log(newWordsAndMeanings);
-  } else if (checkbox.id == "checkboxMemorizeMeanings") {
+    // シャッフル
+    shuffleFlashCardsOrder();
+
+    
     // 単語の意味を覚える
-    console.log("単語の意味を覚える");
+  } else if (checkbox.id == "checkboxMemorizeMeanings") {
+    
+    // 単語と意味の順番を逆に変更
     for (let i = 0; newWordsAndMeanings.length > i; i++) {
       newWordsAndMeanings[i].reverse();
     }
-    console.log(newWordsAndMeanings);
-  } else {
+    // シャッフル
+    shuffleFlashCardsOrder();
+    
     // 両方を覚える
+  } else {
     console.log("両方を覚える");
     console.log(newWordsAndMeanings);
   }
+}
+
+// 単語や意味を入力した順ではなく、ランダムにする
+function shuffleFlashCardsOrder(){
+  for(let i = (newWordsAndMeanings.length-1); 0 < i; i--){
+    let randomNumber = Math.floor(Math.random()*(i+1));
+    
+    [newWordsAndMeanings[i],newWordsAndMeanings[randomNumber]] = [newWordsAndMeanings[randomNumber],newWordsAndMeanings[i]];
+    
+  }
+  console.log(newWordsAndMeanings)
 }
