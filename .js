@@ -128,31 +128,65 @@ function toPracticePage(checkbox) {
     // シャッフル
     shuffleFlashCardsOrder();
 
-    
     // 単語の意味を覚える
   } else if (checkbox.id == "checkboxMemorizeMeanings") {
-    
     // 単語と意味の順番を逆に変更
     for (let i = 0; newWordsAndMeanings.length > i; i++) {
       newWordsAndMeanings[i].reverse();
     }
     // シャッフル
     shuffleFlashCardsOrder();
-    
-    // 両方を覚える
+
+    // 全てランダムにして覚える
   } else {
-    console.log("両方を覚える");
     console.log(newWordsAndMeanings);
+    shuffleWordsAndMeanings();
+    shuffleFlashCardsOrder();
   }
 }
 
 // 単語や意味を入力した順ではなく、ランダムにする
-function shuffleFlashCardsOrder(){
-  for(let i = (newWordsAndMeanings.length-1); 0 < i; i--){
-    let randomNumber = Math.floor(Math.random()*(i+1));
-    
-    [newWordsAndMeanings[i],newWordsAndMeanings[randomNumber]] = [newWordsAndMeanings[randomNumber],newWordsAndMeanings[i]];
-    
+function shuffleFlashCardsOrder() {
+  for (let i = newWordsAndMeanings.length - 1; 0 < i; i--) {
+    let randomNumber = Math.floor(Math.random() * (i + 1));
+
+    [newWordsAndMeanings[i], newWordsAndMeanings[randomNumber]] = [
+      newWordsAndMeanings[randomNumber],
+      newWordsAndMeanings[i],
+    ];
   }
-  console.log(newWordsAndMeanings)
+  console.log(newWordsAndMeanings);
 }
+
+// 単語（スペル）を問うのか、意味を問うのかをランダムにする
+function shuffleWordsAndMeanings() {
+  for (let i = newWordsAndMeanings.length - 1; 0 <= i; i--) {
+    let randomNumber = Math.floor(Math.random() * 2);
+    if (randomNumber == "0") {
+      ;
+    } else {
+      newWordsAndMeanings[i].reverse();
+    }
+  }
+  console.log(newWordsAndMeanings);
+}
+
+// function shuffleWordsAndMeanings(){
+//   for(let i = (newWordsAndMeanings.length-1); 0 <= i; i--){
+//     let randomNumber = Math.floor(Math.random()*2);
+//     console.log(randomNumber)
+//     if(randomNumber==0&&i!==0){
+//       console.log(i);
+//       let j = 1;
+//       [newWordsAndMeanings[i][randomNumber],newWordsAndMeanings[i][j]] = [newWordsAndMeanings[i][j],newWordsAndMeanings[i][randomNumber]];
+//       console.log(newWordsAndMeanings)
+//       // break;
+//     }else if(randomNumber==1&&i!==0){
+//       console.log(i);
+//       let j=0;
+//       [newWordsAndMeanings[i][j],newWordsAndMeanings[i][randomNumber]] = [newWordsAndMeanings[i][randomNumber],newWordsAndMeanings[i][j]];
+//       console.log(newWordsAndMeanings)
+//       // break;
+//     }
+//   }
+// }
