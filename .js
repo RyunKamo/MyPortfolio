@@ -61,8 +61,8 @@ function makeFlashCards(checkbox){
         break;
       }else{
         newWordsAndMeanings.push(wordsAndMeanings.slice(i*2,(i+2)+i*1))
-        // document.getElementById("main_page_content").style.display="none";
-        // document.getElementById("selectFlashCardsTypesPage").style.display="block";
+        document.getElementById("mainPageContent").style.display="none";
+        document.getElementById("selectFlashCardsTypesPage").style.display="flex";
       }
     }
   }else{
@@ -108,4 +108,17 @@ function deleteBtn(element){
           document.getElementById("blackBoardTitle").style.display="block";
         }
   }
+}
+
+// 単語帳の意味をタイプを選択する画面
+
+function toPracticePage(checkbox){
+  console.log(checkbox.id)
+  // if(checkbox.id==){
+
+  // }else if(){
+
+  // }else{
+
+  // }
 }

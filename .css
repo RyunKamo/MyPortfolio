@@ -3,7 +3,14 @@ body {
     background-color: #00552E;
 }
 
-.black_board {
+
+/* メインページ（最初）の画面 */
+.black_board_title {
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
+}
+.main_page_content {
     display: flex;
     position: fixed;
     width: 100%;
@@ -13,13 +20,6 @@ body {
     flex-direction: column;
 }
 
-.black_board_title {
-    color: white;
-    font-weight: bold;
-    font-size: 35px;
-}
-
-/* メインページ（最初）の画面 */
 .use_flash_cards{
     display: none;
     color: white;
@@ -85,4 +85,16 @@ input[type=checkbox] {
 /* 単語帳の意味をタイプを選択する画面 */
 .select_flash_cards_types_page{
     display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.memorize_words, .memorize_meanings, .memorize_both{
+    color: white;
+    font-weight: bold;
+    font-size: 35px;
 }
