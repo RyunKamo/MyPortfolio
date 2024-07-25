@@ -53,7 +53,7 @@ function nextBtn() {
   // console.log(wordsAndMeanings);
 }
 
-// チェックボックスに✓が付け加えられた際に、（一次元）配列を英単語とその意味ごとに区切りに多次元配列に変更
+// ✓が付け加えられた際に、（一次元）配列を英単語とその意味ごとに区切りに多次元配列に変更、及び単語帳の種類選択できるよ画面に変更する
 function makeFlashCards(checkbox){
   if(checkbox.checked){
     for(let i = 0; wordsAndMeanings.length>i; i++ ){
@@ -61,6 +61,8 @@ function makeFlashCards(checkbox){
         break;
       }else{
         newWordsAndMeanings.push(wordsAndMeanings.slice(i*2,(i+2)+i*1))
+        // document.getElementById("main_page_content").style.display="none";
+        // document.getElementById("selectFlashCardsTypesPage").style.display="block";
       }
     }
   }else{

@@ -1,3 +1,4 @@
+/* 基本設定 */
 body {
     background-color: #00552E;
 }
@@ -18,6 +19,7 @@ body {
     font-size: 35px;
 }
 
+/* メインページ（最初）の画面 */
 .use_flash_cards{
     display: none;
     color: white;
@@ -78,4 +80,9 @@ input[type=checkbox] {
 
 .delete_words_btn,.delete_meanings_btn, .next_btn {
     cursor: pointer;
+}
+
+/* 単語帳の意味をタイプを選択する画面 */
+.select_flash_cards_types_page{
+    display: none;
 }
