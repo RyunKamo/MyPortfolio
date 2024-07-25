@@ -116,6 +116,7 @@ function toPracticePage(checkbox){
   document.getElementById("selectFlashCardsTypesPage").style.display="none";
   document.getElementById("practicePage").style.display="flex";
 
+  // 
   // if(checkbox.id==){
 
   // }else if(){
