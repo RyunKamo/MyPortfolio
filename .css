@@ -111,14 +111,14 @@ input[type=checkbox] {
     flex-direction: column;
 }
 
-.practice_page_content{
+.practice_page_content {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
 }
 
-.using_flash_cards{
+.using_flash_cards {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -126,6 +126,6 @@ input[type=checkbox] {
     background-color: white;
     font-size: 35px;
     font-weight: bold;
-    width: 35%;
-    height: 60%;
+    width: 28%;
+    height: 80px;
 }
