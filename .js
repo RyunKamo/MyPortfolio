@@ -76,7 +76,7 @@ function makeFlashCards(checkbox) {
     }
   } else {
   }
-  console.log(newWordsAndMeanings);
+  // console.log(newWordsAndMeanings);
 }
 
 function deleteBtn(element) {
@@ -122,16 +122,18 @@ function deleteBtn(element) {
 function toPracticePage(checkbox) {
   document.getElementById("selectFlashCardsTypesPage").style.display = "none";
   document.getElementById("practicePage").style.display = "flex";
-  
-  if(checkbox.id =="checkboxMemorizeWords"){
+
+  if (checkbox.id == "checkboxMemorizeWords") {
     // 単語のスペルを覚える
     console.log("単語のスペルを覚える");
-    
-  }else if(checkbox.id =="checkboxMemorizeMeanings"){
+  } else if (checkbox.id == "checkboxMemorizeMeanings") {
     // 単語の意味を覚える
     console.log("単語の意味を覚える");
-    
-  }else{
+    for (let i = 0; newWordsAndMeanings.length > i; i++) {
+      newWordsAndMeanings[i].reverse();
+    }
+    console.log(newWordsAndMeanings);
+  } else {
     // 両方を覚える
     console.log("両方を覚える");
   }
