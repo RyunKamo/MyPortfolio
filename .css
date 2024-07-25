@@ -10,6 +10,7 @@ body {
     font-weight: bold;
     font-size: 35px;
 }
+
 .main_page_content {
     display: flex;
     position: fixed;
@@ -20,7 +21,7 @@ body {
     flex-direction: column;
 }
 
-.use_flash_cards{
+.use_flash_cards {
     display: none;
     color: white;
     font-weight: bold;
@@ -69,7 +70,7 @@ input[type=checkbox] {
     width: 100%;
 }
 
-.next_btn_container,.delete_btn_container {
+.next_btn_container, .delete_btn_container {
     display: none;
     color: white;
     font-weight: bold;
@@ -78,12 +79,12 @@ input[type=checkbox] {
     margin-top: 1%;
 }
 
-.delete_words_btn,.delete_meanings_btn, .next_btn {
+.delete_words_btn, .delete_meanings_btn, .next_btn {
     cursor: pointer;
 }
 
 /* 単語帳の意味をタイプを選択する画面 */
-.select_flash_cards_types_page{
+.select_flash_cards_types_page {
     display: none;
     position: fixed;
     width: 100%;
@@ -93,8 +94,38 @@ input[type=checkbox] {
     flex-direction: column;
 }
 
-.memorize_words, .memorize_meanings, .memorize_both{
+.memorize_words, .memorize_meanings, .memorize_both {
     color: white;
     font-weight: bold;
     font-size: 35px;
+}
+
+/* 単語帳で練習  */
+.practice_page {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.practice_page_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.using_flash_cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    background-color: white;
+    font-size: 35px;
+    font-weight: bold;
+    width: 35%;
+    height: 60%;
 }

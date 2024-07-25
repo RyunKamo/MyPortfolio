@@ -111,9 +111,11 @@ function deleteBtn(element){
 }
 
 // 単語帳の意味をタイプを選択する画面
-
 function toPracticePage(checkbox){
   console.log(checkbox.id)
+  document.getElementById("selectFlashCardsTypesPage").style.display="none";
+  document.getElementById("practicePage").style.display="flex";
+
   // if(checkbox.id==){
 
   // }else if(){
