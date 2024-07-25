@@ -126,6 +126,7 @@ function toPracticePage(checkbox) {
   if (checkbox.id == "checkboxMemorizeWords") {
     // 単語のスペルを覚える
     console.log("単語のスペルを覚える");
+    console.log(newWordsAndMeanings);
   } else if (checkbox.id == "checkboxMemorizeMeanings") {
     // 単語の意味を覚える
     console.log("単語の意味を覚える");
@@ -136,5 +137,6 @@ function toPracticePage(checkbox) {
   } else {
     // 両方を覚える
     console.log("両方を覚える");
+    console.log(newWordsAndMeanings);
   }
 }
