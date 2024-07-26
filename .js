@@ -123,13 +123,13 @@ function toPracticePage(checkbox) {
   document.getElementById("selectFlashCardsTypesPage").style.display = "none";
   document.getElementById("practicePage").style.display = "flex";
 
-  
   // 単語のスペルを覚える
   if (checkbox.id == "checkboxMemorizeWords") {
     // シャッフル
     shuffleFlashCardsOrder();
     // 最初の画面の単語または意味(初期値)
-    document.getElementById("usingFlashCards").innerHTML=newWordsAndMeanings[0][0];
+    document.getElementById("usingFlashCards").innerHTML =
+      newWordsAndMeanings[0][0];
 
     // 単語の意味を覚える
   } else if (checkbox.id == "checkboxMemorizeMeanings") {
@@ -140,7 +140,8 @@ function toPracticePage(checkbox) {
     // シャッフル
     shuffleFlashCardsOrder();
     // 最初の画面の単語または意味(初期値)
-    document.getElementById("usingFlashCards").innerHTML=newWordsAndMeanings[0][0];
+    document.getElementById("usingFlashCards").innerHTML =
+      newWordsAndMeanings[0][0];
 
     // 全てランダムにして覚える
   } else {
@@ -148,7 +149,8 @@ function toPracticePage(checkbox) {
     shuffleWordsAndMeanings();
     shuffleFlashCardsOrder();
     // 最初の画面の単語または意味(初期値)
-    document.getElementById("usingFlashCards").innerHTML=newWordsAndMeanings[0][0];
+    document.getElementById("usingFlashCards").innerHTML =
+      newWordsAndMeanings[0][0];
   }
 }
 
@@ -170,7 +172,6 @@ function shuffleWordsAndMeanings() {
   for (let i = newWordsAndMeanings.length - 1; 0 <= i; i--) {
     let randomNumber = Math.floor(Math.random() * 2);
     if (randomNumber == "0") {
-      ;
     } else {
       newWordsAndMeanings[i].reverse();
     }
@@ -178,18 +179,19 @@ function shuffleWordsAndMeanings() {
   console.log(newWordsAndMeanings);
 }
 
-function nextBackBtn(element){
-  if(element.id=="nextBtn"){
-    let num = 1;
-    document.getElementById("usingFlashCards").innerHTML=newWordsAndMeanings[][];
-    // newWordsAndMeanings[0].concat(newWordsAndMeanings[1],newWordsAndMeanings[2])
-    // for(let i = 0; i <= newWordsAndMeanings.length-1; i++){
-    //   console.log(i)
-    // }
-    // console.log("次へ進みます")
-  }else{
-    document.getElementById("usingFlashCards").innerHTML="ryu"
-    // console.log("後に戻ります")
+// ボタンを使った、単語帳を前後に動かす処理
+var num = 0;
+function nextBackBtn(element) {
+  if (element.id == "nextBtn") {
+    num = num + 1;
+    console.log(num);
+  } else {
+    if(num==0){
+      ;
+    }else{
+      num = num - 1;
+      console.log(num);
+    }
   }
 }
 
