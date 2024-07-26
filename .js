@@ -123,10 +123,13 @@ function toPracticePage(checkbox) {
   document.getElementById("selectFlashCardsTypesPage").style.display = "none";
   document.getElementById("practicePage").style.display = "flex";
 
+  
   // 単語のスペルを覚える
   if (checkbox.id == "checkboxMemorizeWords") {
     // シャッフル
     shuffleFlashCardsOrder();
+    // 最初の画面の単語または意味(初期値)
+    document.getElementById("usingFlashCards").innerHTML=newWordsAndMeanings[0][0];
 
     // 単語の意味を覚える
   } else if (checkbox.id == "checkboxMemorizeMeanings") {
@@ -136,12 +139,16 @@ function toPracticePage(checkbox) {
     }
     // シャッフル
     shuffleFlashCardsOrder();
+    // 最初の画面の単語または意味(初期値)
+    document.getElementById("usingFlashCards").innerHTML=newWordsAndMeanings[0][0];
 
     // 全てランダムにして覚える
   } else {
     console.log(newWordsAndMeanings);
     shuffleWordsAndMeanings();
     shuffleFlashCardsOrder();
+    // 最初の画面の単語または意味(初期値)
+    document.getElementById("usingFlashCards").innerHTML=newWordsAndMeanings[0][0];
   }
 }
 
@@ -173,11 +180,14 @@ function shuffleWordsAndMeanings() {
 
 function nextBackBtn(element){
   if(element.id=="nextBtn"){
-    console.log("次へ進みます")
+    // for(let i = 0; i <= newWordsAndMeanings.length; i++){
+
+    // }
+    // console.log("次へ進みます")
     document.getElementById("usingFlashCards").innerHTML="kamo"
   }else{
     document.getElementById("usingFlashCards").innerHTML="ryu"
-    console.log("後に戻ります")
+    // console.log("後に戻ります")
   }
 }
 
