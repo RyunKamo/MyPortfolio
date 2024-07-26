@@ -180,11 +180,13 @@ function shuffleWordsAndMeanings() {
 
 function nextBackBtn(element){
   if(element.id=="nextBtn"){
-    // for(let i = 0; i <= newWordsAndMeanings.length; i++){
-
+    let num = 1;
+    document.getElementById("usingFlashCards").innerHTML=newWordsAndMeanings[][];
+    // newWordsAndMeanings[0].concat(newWordsAndMeanings[1],newWordsAndMeanings[2])
+    // for(let i = 0; i <= newWordsAndMeanings.length-1; i++){
+    //   console.log(i)
     // }
     // console.log("次へ進みます")
-    document.getElementById("usingFlashCards").innerHTML="kamo"
   }else{
     document.getElementById("usingFlashCards").innerHTML="ryu"
     // console.log("後に戻ります")
