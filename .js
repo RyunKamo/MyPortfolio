@@ -174,7 +174,9 @@ function shuffleWordsAndMeanings() {
 function nextBackBtn(element){
   if(element.id=="nextBtn"){
     console.log("次へ進みます")
+    document.getElementById("usingFlashCards").innerHTML="kamo"
   }else{
+    document.getElementById("usingFlashCards").innerHTML="ryu"
     console.log("後に戻ります")
   }
 }
