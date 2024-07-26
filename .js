@@ -9,14 +9,14 @@ function appearSaveBtn() {
     document.getElementById("words").value !== "" ||
     document.getElementById("meanings").value !== ""
   ) {
-    document.getElementById("nextBtnContainer").style.display = "flex";
+    document.getElementById("saveBtnContainer").style.display = "flex";
   } else {
-    document.getElementById("nextBtnContainer").style.display = "none";
+    document.getElementById("saveBtnContainer").style.display = "none";
   }
 }
 
 // 配列に英単語と意味を加える処理
-function nextBtn() {
+function saveBtn() {
   if (
     document.getElementById("FlashCardsWords").style.display != "none" &&
     document.getElementById("words").value !== ""
@@ -24,7 +24,7 @@ function nextBtn() {
     wordsAndMeanings.push(document.getElementById("words").value);
     document.getElementById("FlashCardsWords").style.display = "none";
     document.getElementById("words").value = "";
-    document.getElementById("nextBtnContainer").style.display = "none";
+    document.getElementById("saveBtnContainer").style.display = "none";
     document.getElementById("FlashCardsMeanigs").style.display = "flex";
 
     // 一つ前の英単語を消すボタンを出現させる処理
@@ -40,7 +40,7 @@ function nextBtn() {
     wordsAndMeanings.push(document.getElementById("meanings").value);
     document.getElementById("FlashCardsMeanigs").style.display = "none";
     document.getElementById("meanings").value = "";
-    document.getElementById("nextBtnContainer").style.display = "none";
+    document.getElementById("saveBtnContainer").style.display = "none";
     document.getElementById("FlashCardsWords").style.display = "flex";
 
     // 一つ前の意味を消すボタンを出現させる処理

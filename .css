@@ -70,7 +70,7 @@ input[type=checkbox] {
     width: 100%;
 }
 
-.next_btn_container, .delete_btn_container {
+.save_btn_container, .delete_btn_container {
     display: none;
     color: white;
     font-weight: bold;
@@ -79,7 +79,7 @@ input[type=checkbox] {
     margin-top: 1%;
 }
 
-.delete_words_btn, .delete_meanings_btn, .next_btn {
+.delete_words_btn, .delete_meanings_btn, .save_btn {
     cursor: pointer;
 }
 
