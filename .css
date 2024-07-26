@@ -109,6 +109,7 @@ input[type=checkbox] {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 5% 0;
 }
 
 .practice_page_content {
@@ -128,4 +129,19 @@ input[type=checkbox] {
     font-weight: bold;
     width: 28%;
     height: 80px;
+}
+
+.next_back_btn_container{
+    display: flex;
+    gap: 30px;
+}
+
+.next_btn, .back_btn{
+    color: white;
+    font-weight: bold;
+    border: solid 3px;
+    border-radius: 50%;
+    font-size: 20px;
+    padding: 6px 12px;
+    cursor: pointer;
 }
