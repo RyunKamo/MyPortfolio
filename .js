@@ -182,15 +182,24 @@ function shuffleWordsAndMeanings() {
 // ボタンを使った、単語帳を前後に動かす処理
 var num = 0;
 function nextBackBtn(element) {
+  // （シャッフル後）再び一元配列に変更
+  var flatArray = newWordsAndMeanings.flat();
+  console.log(flatArray);
+  
   if (element.id == "nextBtn") {
-    num = num + 1;
-    console.log(num);
+    if(num==flatArray.length){
+      ;
+    }else{
+      num = num + 1;
+      document.getElementById("usingFlashCards").innerHTML = flatArray[num];
+      // console.log(flatArray[num]);
+    }
   } else {
     if(num==0){
       ;
     }else{
       num = num - 1;
-      console.log(num);
+      console.log(newWordsAndMeanings[0+num]);
     }
   }
 }
