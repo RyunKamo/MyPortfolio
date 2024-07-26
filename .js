@@ -171,6 +171,14 @@ function shuffleWordsAndMeanings() {
   console.log(newWordsAndMeanings);
 }
 
+function nextBackBtn(element){
+  if(element.id=="nextBtn"){
+    console.log("次へ進みます")
+  }else{
+    console.log("後に戻ります")
+  }
+}
+
 // function shuffleWordsAndMeanings(){
 //   for(let i = (newWordsAndMeanings.length-1); 0 <= i; i--){
 //     let randomNumber = Math.floor(Math.random()*2);
