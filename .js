@@ -184,15 +184,18 @@ var num = 0;
 function nextBackBtn(element) {
   // （シャッフル後）再び一元配列に変更
   var flatArray = newWordsAndMeanings.flat();
-  console.log(flatArray);
+  // console.log(flatArray);
   
   if (element.id == "nextBtn") {
-    if(num==flatArray.length){
-      ;
+    if(num==flatArray.length-1){
+      console.log("stop")
+      document.getElementById("usingFlashCards").innerHTML = flatArray[num];
+      document.getElementById("nextBtn").style.pointerEvents ="none";
+      // console.log(num,flatArray.length);
     }else{
       num = num + 1;
       document.getElementById("usingFlashCards").innerHTML = flatArray[num];
-      // console.log(flatArray[num]);
+      console.log(num,flatArray.length);
     }
   } else {
     if(num==0){
