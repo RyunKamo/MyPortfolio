@@ -58,7 +58,6 @@ function saveBtn() {
     document.getElementById("useFlashCards").style.display = "none";
     document.getElementById("blackBoardTitle").style.display = "block";
   }
-  // console.log(wordsAndMeanings);
 }
 
 // ✓が付け加えられた際に、（一次元）配列を英単語とその意味ごとに区切りに多次元配列に変更、及び単語帳の種類選択できるよ画面に変更する
@@ -76,15 +75,12 @@ function makeFlashCards(checkbox) {
     }
   } else {
   }
-  // console.log(newWordsAndMeanings);
 }
 
 function deleteBtn(element) {
-  console.log(wordsAndMeanings);
   if (element.id == "deleteWordsBtn") {
     // 配列の最新の要素（＝一番最後の要素）を抽出し、消去する
     wordsAndMeanings.pop();
-    console.log(wordsAndMeanings);
     document.getElementById("FlashCardsMeanigs").style.display = "none";
     document.getElementById("deleteBtnContainer").style.display = "none";
     document.getElementById("deleteMeaningsBtn").style.display = "none";
@@ -101,7 +97,6 @@ function deleteBtn(element) {
   } else {
     // 配列の最新の要素（＝一番最後の要素）を抽出し、消去する
     wordsAndMeanings.pop();
-    console.log(wordsAndMeanings);
     document.getElementById("FlashCardsWords").style.display = "none";
     document.getElementById("deleteBtnContainer").style.display = "none";
     document.getElementById("deleteWordsBtn").style.display = "none";
@@ -145,7 +140,6 @@ function toPracticePage(checkbox) {
 
     // 全てランダムにして覚える
   } else {
-    console.log(newWordsAndMeanings);
     shuffleWordsAndMeanings();
     shuffleFlashCardsOrder();
     // 最初の画面の単語または意味(初期値)
@@ -164,7 +158,6 @@ function shuffleFlashCardsOrder() {
       newWordsAndMeanings[i],
     ];
   }
-  console.log(newWordsAndMeanings);
 }
 
 // 単語（スペル）を問うのか、意味を問うのかをランダムにする
@@ -176,7 +169,6 @@ function shuffleWordsAndMeanings() {
       newWordsAndMeanings[i].reverse();
     }
   }
-  console.log(newWordsAndMeanings);
 }
 
 // ボタンを使った、単語帳を前後に動かす処理
@@ -184,25 +176,24 @@ var num = 0;
 function nextBackBtn(element) {
   // （シャッフル後）再び一元配列に変更
   var flatArray = newWordsAndMeanings.flat();
-  // console.log(flatArray);
   
   if (element.id == "nextBtn") {
     if(num==flatArray.length-1){
-      console.log("stop")
       document.getElementById("usingFlashCards").innerHTML = flatArray[num];
       document.getElementById("nextBtn").style.pointerEvents ="none";
-      // console.log(num,flatArray.length);
     }else{
       num = num + 1;
       document.getElementById("usingFlashCards").innerHTML = flatArray[num];
-      console.log(num,flatArray.length);
+      document.getElementById("backBtn").style.pointerEvents ="auto";
     }
   } else {
     if(num==0){
-      ;
+      document.getElementById("usingFlashCards").innerHTML = flatArray[num];
+      document.getElementById("backBtn").style.pointerEvents ="none";
     }else{
       num = num - 1;
-      console.log(newWordsAndMeanings[0+num]);
+      document.getElementById("usingFlashCards").innerHTML = flatArray[num];
+      document.getElementById("nextBtn").style.pointerEvents ="auto";
     }
   }
 }
