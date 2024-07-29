@@ -197,23 +197,3 @@ function nextBackBtn(element) {
     }
   }
 }
-
-// function shuffleWordsAndMeanings(){
-//   for(let i = (newWordsAndMeanings.length-1); 0 <= i; i--){
-//     let randomNumber = Math.floor(Math.random()*2);
-//     console.log(randomNumber)
-//     if(randomNumber==0&&i!==0){
-//       console.log(i);
-//       let j = 1;
-//       [newWordsAndMeanings[i][randomNumber],newWordsAndMeanings[i][j]] = [newWordsAndMeanings[i][j],newWordsAndMeanings[i][randomNumber]];
-//       console.log(newWordsAndMeanings)
-//       // break;
-//     }else if(randomNumber==1&&i!==0){
-//       console.log(i);
-//       let j=0;
-//       [newWordsAndMeanings[i][j],newWordsAndMeanings[i][randomNumber]] = [newWordsAndMeanings[i][randomNumber],newWordsAndMeanings[i][j]];
-//       console.log(newWordsAndMeanings)
-//       // break;
-//     }
-//   }
-// }
