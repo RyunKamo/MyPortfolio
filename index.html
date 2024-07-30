@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>英単語帳</title>
+  </head>
+  <body>
+    <div class="black_board">
+      <div id="mainPageContent" class="main_page_content">
+        <!-- メインページ -->
+        <p class="black_board_title" id="blackBoardTitle">オリジナルの単語帳をつくろう！</p>
+        <p class="use_flash_cards" id="useFlashCards">単語帳を使いますか？<input type="checkbox" class="checkbox_use_flash_cards" id="checkboxUseFlashCards" onchange="makeFlashCards(this)"></p>
+        <div id="FlashCardsWords" class="flash_cards_words">
+          <input
+          type="text"
+          id="words"
+          class="words"
+          placeholder="単語を書いて下さい"
+          onblur="appearSaveBtn();"
+          />
+        </div>
+        <div id="FlashCardsMeanigs" class="flash_cards_meanings">
+          <input
+          type="text"
+          id="meanings"
+          class="meanings"
+          placeholder="英単語の意味を書いて下さい"
+          onblur="appearSaveBtn();"
+          />
+        </div>
+        <div id="saveBtnContainer" class="save_btn_container">
+          <span class="save_btn" onclick="saveBtn()">次へ</span>
+        </div>
+        <div id="deleteBtnContainer" class="delete_btn_container">
+          <span class="delete_words_btn" id="deleteWordsBtn" onclick="deleteBtn(this)">一つ前の英単語を消去</span>
+          <span class="delete_meanings_btn" id="deleteMeaningsBtn" onclick="deleteBtn(this)">一つ前の意味を消去</span>
+        </div>
+        <!-- メインページ -->
+      </div>
+      
+      <!-- 単語帳のタイプを選ぶ画面 -->
+      <div id="selectFlashCardsTypesPage" class="select_flash_cards_types_page">
+        <div id="selectFlashCardsTypes" class="select_flash_cards_types">
+          <p class="memorize_words">単語のスペルを覚える<input type="checkbox" class="checkbox_memorize_words" id="checkboxMemorizeWords" onchange="toPracticePage(this)"></p>
+          <p class="memorize_meanings">単語の意味を覚える<input type="checkbox" class="checkbox_memorize_meanings" id="checkboxMemorizeMeanings"onchange="toPracticePage(this)"></p>
+          <p class="memorize_both">全てランダムにして覚える<input type="checkbox" class="checkbox_memorize_both" id="checkboxMemorizeBoth"onchange="toPracticePage(this)"></p>
+        </div>
+        <!-- 単語帳のタイプを選ぶ画面 -->
+      </div>
+    </div>
+    
+    <!-- 単語帳で練習 -->
+    <div id="practicePage" class="practice_page">
+      <div class="practice_page_content">
+        <div id="usingFlashCards" class="using_flash_cards"></div>
+      </div>
+      <div class="next_back_btn_container">
+        <div id="backBtn" class="back_btn" onclick="nextBackBtn(this)">＜</div>
+        <div id="nextBtn" class="next_btn" onclick="nextBackBtn(this)">＞</div>
+      </div>
+    </div>
+    <!-- 単語帳で練習 -->
+  </div>
+  <script src="index.js"></script>
+</body>
+</html>
